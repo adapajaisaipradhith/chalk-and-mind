@@ -1,0 +1,662 @@
+[
+  {
+    "day": 1,
+    "title": "Engineering vs Reality",
+    "category": "Indian Meme / Comedy",
+    "theme": "Career Expectations",
+    "hook": "Why does every Indian engineer end up doing literally everything EXCEPT engineering?",
+    "narration": "In school, Indian parents say: 'Just do engineering, life is set.' Four years and 40 backlogs later, you graduate with a degree in coding, but your real job is making PPTs, explaining Wi-Fi to relatives, and launching a chai startup. Life is set, but the settings are wrong.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.50", "text": "JUST DO ENGINEERING, LIFE IS SET!"},
+      {"start": "00:00:05.50", "end": "00:00:11.00", "text": "4 YEARS & 40 BACKLOGS LATER..."},
+      {"start": "00:00:11.00", "end": "00:00:17.00", "text": "DEGREE IN CODING, BUT MAKING PPTS & FIXING WI-FI"},
+      {"start": "00:00:17.00", "end": "00:00:22.50", "text": "LIFE IS SET, BUT SETTINGS ARE WRONG!"}
+    ],
+    "animation_scenes": [
+      {"action": "proud_parent", "prop": "degree", "emotion": "happy"},
+      {"action": "studying_books", "prop": "flying_papers", "emotion": "stressed"},
+      {"action": "typing_laptop", "prop": "chai_cup", "emotion": "bored"},
+      {"action": "facepalm", "prop": "question_marks", "emotion": "shocked"}
+    ],
+    "hashtags": "#reelsindia #engineerlife #indianmemes #relatablehumor #trendingreels #dailymemes",
+    "caption": "Tag an engineer whose settings are completely wrong! 💻☕😂 #engineeringlife #relatablememes"
+  },
+  {
+    "day": 2,
+    "title": "Sharma Ji Ka Beta Syndrome",
+    "category": "Relatable Indian Family",
+    "theme": "Parental Comparison",
+    "hook": "Scientifically proven: Sharma Ji Ka Beta is not a human, he is a mythical creature.",
+    "narration": "He wakes up at 4 AM, scores 99.8 percent, plays cricket like Dhoni, and has already solved inflation. Meanwhile, you woke up at 11 AM, drank cold chai, and struggled to open a snack packet. Comparison is useless. You are on your own timeline. Go conquer your day.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "SHARMA JI KA BETA IS NOT HUMAN..."},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "SCORES 99.8% & WAKES UP AT 4 AM!"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "YOU WOKE UP AT 11 AM DRINKING COLD CHAI"},
+      {"start": "00:00:16.00", "end": "00:00:22.00", "text": "YOU ARE ON YOUR OWN TIMELINE. WIN TODAY!"}
+    ],
+    "animation_scenes": [
+      {"action": "flying_hero", "prop": "golden_trophy", "emotion": "superhero"},
+      {"action": "waking_up_bed", "prop": "alarm_clock", "emotion": "sleepy"},
+      {"action": "drinking_chai", "prop": "chai_cup", "emotion": "chilling"},
+      {"action": "fist_pump", "prop": "fire_energy", "emotion": "motivated"}
+    ],
+    "hashtags": "#sharmajikabeta #indianhumor #inspirationdaily #selfgrowth #reelsviral",
+    "caption": "Stop comparing yourself to mythical beings. Focus on your own growth! 🚀🔥"
+  },
+  {
+    "day": 3,
+    "title": "The 5-Minute Chai Break Paradox",
+    "category": "Corporate Humor",
+    "theme": "Workplace Reality",
+    "hook": "In Indian offices, '5-minute chai break' is a legal time-travel phenomenon.",
+    "narration": "You step outside the office at 4 PM saying: 'Bro, just 5 minutes for tea.' Two cutting chais, three biscuits, solving world politics, and roasting your manager later, you check your watch: it's 5:45 PM. The chai didn't just fix your mood; it deleted your entire afternoon.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "BRO, JUST 5 MINUTES CHAI BREAK..."},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "2 CUTTING CHAIS & SOLVING WORLD POLITICS"},
+      {"start": "00:00:10.50", "end": "00:00:15.50", "text": "ROASTING YOUR MANAGER FOR 40 MINUTES"},
+      {"start": "00:00:15.50", "end": "00:00:21.50", "text": "CHAI DELETED YOUR ENTIRE AFTERNOON!"}
+    ],
+    "animation_scenes": [
+      {"action": "walking_out", "prop": "office_badge", "emotion": "excited"},
+      {"action": "drinking_chai", "prop": "chai_glass", "emotion": "talking"},
+      {"action": "spinning_clock", "prop": "giant_watch", "emotion": "shocked"},
+      {"action": "running_back", "prop": "laptop_briefcase", "emotion": "panic"}
+    ],
+    "hashtags": "#chaibreak #corporatehumor #officelife #indianoffice #relatablework",
+    "caption": "Who is guilty of the 45-minute chai break? Drop your chai buddy below! ☕😂"
+  },
+  {
+    "day": 4,
+    "title": "Indian Mom's Ultrasonic Sixth Sense",
+    "category": "Family Humor",
+    "theme": "Mothers",
+    "hook": "NASA has satellites, but Indian mothers have something far more terrifying.",
+    "narration": "You can search the entire house for your keys for 45 minutes—cupboards, drawers, sofa. Zero results. You yell: 'Mummy, keys nahi mil rahe!' Mom walks in without looking, puts her hand in plain sight, and pulls them out. Magic? No. Pure Indian mother telepathy.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "NASA HAS SATELLITES..."},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "INDIAN MOMS HAVE ULTRASONIC RADAR!"},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "SEARCHED 45 MINUTES: KEYS NAHI MIL RAHE!"},
+      {"start": "00:00:15.50", "end": "00:00:21.00", "text": "MOM PULLS THEM OUT FROM THIN AIR!"}
+    ],
+    "animation_scenes": [
+      {"action": "searching_floor", "prop": "magnifying_glass", "emotion": "confused"},
+      {"action": "screaming_up", "prop": "speech_bubbles", "emotion": "frustrated"},
+      {"action": "mom_walking_in", "prop": "magical_sparkles", "emotion": "cool"},
+      {"action": "holding_keys", "prop": "glowing_keys", "emotion": "speechless"}
+    ],
+    "hashtags": "#indianmoms #desihumor #relatablefamily #magicmom #instareels",
+    "caption": "How do moms do this every single time?! Respect to all Indian moms! 🙏❤️"
+  },
+  {
+    "day": 5,
+    "title": "The Monday Morning Motivation Trap",
+    "category": "Inspirational Meme",
+    "theme": "Hustle vs Reality",
+    "hook": "On Sunday night you plan to conquer the universe. On Monday morning you negotiate with bed.",
+    "narration": "Sunday 11 PM: 'Tomorrow I wake up at 5 AM, run 5 kilometers, read 20 pages, and invest in stocks.' Monday 6:30 AM: Alarm rings. You calculate: 'If I skip bath, don't comb hair, and sprint like Usain Bolt, I get 18 more minutes of sleep.' Discipline is hard, but showing up is everything.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.50", "text": "SUNDAY NIGHT: TOMORROW I CONQUER THE UNIVERSE!"},
+      {"start": "00:00:05.50", "end": "00:00:11.00", "text": "MONDAY 6:30 AM: CALCULATING SLEEP MATH"},
+      {"start": "00:00:11.00", "end": "00:00:16.50", "text": "'IF I SKIP BATH, I GET 18 MORE MINUTES'"},
+      {"start": "00:00:16.50", "end": "00:00:22.00", "text": "DISCIPLINE IS HARD. SHOW UP ANYWAY!"}
+    ],
+    "animation_scenes": [
+      {"action": "dreaming_champion", "prop": "floating_trophy", "emotion": "inspired"},
+      {"action": "alarm_shaking", "prop": "ringing_bell", "emotion": "annoyed"},
+      {"action": "burrito_blanket", "prop": "calculator", "emotion": "thinking"},
+      {"action": "stepping_out", "prop": "sunrise_glow", "emotion": "determined"}
+    ],
+    "hashtags": "#mondaymotivation #hustleindia #relatablememes #discipline #dailyshorts",
+    "caption": "Stop negotiating with your alarm clock. Win the morning! 🌅💪"
+  },
+  {
+    "day": 6,
+    "title": "Bargaining Masterclass: The ₹50 Auto Ride",
+    "category": "Indian Street Humor",
+    "theme": "Bargaining",
+    "hook": "Harvard teaches business negotiation, but Indian moms learn it on the street.",
+    "narration": "Auto driver says: 'Madam, one hundred rupees.' Mom says: 'Thirty rupees.' Auto driver laughs: 'No way.' Mom turns 180 degrees and starts walking away at exactly 1.2 kilometers per hour. Three seconds later: 'Aao baitho!' Never underestimate the power of the walking-away tactic.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:04.50", "text": "AUTO DRIVER: 'MADAM, 100 RUPEES'"},
+      {"start": "00:00:04.50", "end": "00:00:09.50", "text": "MOM: '30 RUPEES MEIN CHALO'"},
+      {"start": "00:00:09.50", "end": "00:00:15.00", "text": "THE LEGENDARY SLOW-WALK AWAY TACTIC..."},
+      {"start": "00:00:15.00", "end": "00:00:21.00", "text": "AUTO DRIVER: 'AAO BAITHO!' HARVARD DEFEATED!"}
+    ],
+    "animation_scenes": [
+      {"action": "pointing_finger", "prop": "auto_rickshaw", "emotion": "bargaining"},
+      {"action": "turning_back", "prop": "handbag", "emotion": "walking_away"},
+      {"action": "driver_calling", "prop": "honking_horn", "emotion": "surrendering"},
+      {"action": "cool_sunglasses", "prop": "money_notes", "emotion": "victorious"}
+    ],
+    "hashtags": "#indianbargaining #autorickshaw #desimemes #streetlife #instareels",
+    "caption": "The walking-away technique has a 99% success rate in India 😂🛺"
+  },
+  {
+    "day": 7,
+    "title": "The 2 AM Startup Pitch to the Ceiling Fan",
+    "category": "Inspirational Meme",
+    "theme": "Startup Hustle",
+    "hook": "Every billionaire startup in India was first pitched to a bedroom ceiling fan at 2 AM.",
+    "narration": "Staring at the ceiling fan spinning in the dark. Suddenly, brain sparks: 'What if we build Uber for warm samosas?' You calculate the unit economics, imagine the Shark Tank pitch, rehearse your speech to Anupam Mittal, and fall asleep feeling like a unicorn CEO. Ideas are cheap, execution is everything. Start tomorrow.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.50", "text": "2 AM: STARING AT CEILING FAN"},
+      {"start": "00:00:05.50", "end": "00:00:10.50", "text": "'WHAT IF WE BUILD UBER FOR SAMOSAS?'"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "REHEARSING SHARK TANK PITCH IN BED"},
+      {"start": "00:00:16.00", "end": "00:00:22.00", "text": "IDEAS ARE CHEAP. EXECUTE TOMORROW!"}
+    ],
+    "animation_scenes": [
+      {"action": "lying_bed", "prop": "spinning_fan", "emotion": "staring"},
+      {"action": "lightbulb_pop", "prop": "glowing_samosa", "emotion": "genius"},
+      {"action": "pitching_suit", "prop": "floating_charts", "emotion": "confident"},
+      {"action": "standing_strong", "prop": "rocket_launch", "emotion": "determined"}
+    ],
+    "hashtags": "#startuphustle #sharktankindia #entrepreneurlife #2ammotivations #reels",
+    "caption": "Drop your craziest 2 AM business idea in the comments! 👇💡🚀"
+  },
+  {
+    "day": 8,
+    "title": "Gym Membership vs Sunday Biryani",
+    "category": "Fitness Humor",
+    "theme": "Diet vs Cravings",
+    "hook": "Your fitness journey is going great until Sunday smells like dum biryani.",
+    "narration": "Monday to Friday: boiled eggs, oats, green tea, zero sugar. You feel like a Greek god. Sunday afternoon: Mummy makes mutton biryani with raita. One spoon in, and your six-pack turns into family pack. Balance is life. Enjoy the biryani, hit the gym Monday.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "MON-FRI: OATS, BOILED EGGS & GREEN TEA"},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "YOU FEEL LIKE A GREEK GOD..."},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "SUNDAY AFTERNOON: MUMMY MAKES BIRYANI!"},
+      {"start": "00:00:15.50", "end": "00:00:21.00", "text": "SIX-PACK BECAME FAMILY PACK. BALANCED LIFE!"}
+    ],
+    "animation_scenes": [
+      {"action": "lifting_dumbbells", "prop": "gym_weights", "emotion": "flexing"},
+      {"action": "smelling_aroma", "prop": "steaming_pot", "emotion": "tempted"},
+      {"action": "eating_bowl", "prop": "biryani_bowl", "emotion": "pure_joy"},
+      {"action": "rubbing_belly", "prop": "glowing_smile", "emotion": "peaceful"}
+    ],
+    "hashtags": "#biryanilovers #gymmemes #indianfitness #sundaybiryani #relatablehumor",
+    "caption": "Biryani > Six pack. Anyone else agrees? 🍗🍚😂"
+  },
+  {
+    "day": 9,
+    "title": "The Exam Night All-Nighter Miracle",
+    "category": "Student Meme",
+    "theme": "Engineering / College",
+    "hook": "Six months of syllabus covered in six hours before the 9 AM exam.",
+    "narration": "Throughout the semester, attendance is 12 percent. Book hasn't even been opened. But on exam night at 2 AM, Indian students unlock superhuman brain capacity. YouTube tutorial with a 12-minute Hindi explanation teaches what professors couldn't in six months. Legends don't study early; legends perform under pressure.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "SEMESTER ATTENDANCE: 12 PERCENT"},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "EXAM NIGHT 2 AM: SUPERHUMAN MODE ACTIVATED!"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "ONE 12-MINUTE YOUTUBE VIDEO SAVES YOUR DEGREE"},
+      {"start": "00:00:16.00", "end": "00:00:22.00", "text": "LEGENDS PERFORM UNDER PRESSURE!"}
+    ],
+    "animation_scenes": [
+      {"action": "relaxing_gaming", "prop": "gamepad", "emotion": "carefree"},
+      {"action": "shocked_calendar", "prop": "clock_ticking", "emotion": "panic"},
+      {"action": "lightning_study", "prop": "flying_notes", "emotion": "super_focus"},
+      {"action": "walking_exam_hall", "prop": "sunglasses", "emotion": "boss"}
+    ],
+    "hashtags": "#collegelife #exammemes #engineeringexams #allnighter #desistudents",
+    "caption": "Thank you to the random YouTube guy who explained the entire syllabus in 10 mins! 🙏📚😂"
+  },
+  {
+    "day": 10,
+    "title": "Why Indian Dads Keep Every Cable Since 1998",
+    "category": "Family Humor",
+    "theme": "Dad Habits",
+    "hook": "Inside every Indian household, there is a mysterious polythene bag full of obsolete cables.",
+    "narration": "A Nokia charger from 2004, a printer cable from Windows 98, an auxiliary wire with tape. You say: 'Papa, why don't we throw this?' Dad glares with pure wisdom: 'Kabhi bhi kaam aa sakta hai.' And somehow, 12 years later, he actually finds a use for it. Never doubt dad's archive.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "THE SACRED BAG OF CABLES SINCE 1998"},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "NOKIA 2004 CHARGER & TAPE-WRAPPED WIRES"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "DAD: 'KABHI BHI KAAM AA SAKTA HAI!'"},
+      {"start": "00:00:16.00", "end": "00:00:22.00", "text": "AND 12 YEARS LATER... HE WAS RIGHT!"}
+    ],
+    "animation_scenes": [
+      {"action": "holding_plastic_bag", "prop": "tangled_wires", "emotion": "curious"},
+      {"action": "throwing_gesture", "prop": "trash_can", "emotion": "questioning"},
+      {"action": "dad_stare", "prop": "lightning_eyes", "emotion": "authoritative"},
+      {"action": "successful_plug", "prop": "glowing_light", "emotion": "respect"}
+    ],
+    "hashtags": "#indiandads #desihumor #familyrelatable #dadwisdom #reelsdaily",
+    "caption": "Does your dad also have a cable bag from the Stone Age? Comment YES! 🔌📦😂"
+  },
+  {
+    "day": 11,
+    "title": "The 'Bas 2 Minute Mein Pohach Raha Hoon' Lie",
+    "category": "Friendship Meme",
+    "theme": "Punctuality",
+    "hook": "The biggest lie in human history isn't politics. It's an Indian friend on the phone.",
+    "narration": "You are standing at the metro station in 40-degree heat. You call him: 'Kahan hai bhai?' He says: 'Bas bhai 2 minute, signal pe hoon.' Translation: he just woke up, hasn't brushed his teeth, and is looking for his socks under the bed. Value the friendship, but never trust the '2 minute.'",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "STANDING AT METRO IN 40° HEAT..."},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "'BHAI KAHAN HAI?'"},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "'BAS 2 MINUTE BHAI, RED LIGHT PE HOON!'"},
+      {"start": "00:00:15.50", "end": "00:00:21.00", "text": "REALITY: HE JUST WOKE UP & LOOKING FOR SOCKS!"}
+    ],
+    "animation_scenes": [
+      {"action": "sweating_heat", "prop": "phone_calling", "emotion": "waiting"},
+      {"action": "friend_bed", "prop": "pillow_mess", "emotion": "yawning"},
+      {"action": "searching_sock", "prop": "flying_shoe", "emotion": "scrambling"},
+      {"action": "facepalm_metro", "prop": "clock_ticking", "emotion": "defeated"}
+    ],
+    "hashtags": "#friendshipmemes #indianfriends #dosti #2minutelie #relatablereels",
+    "caption": "Tag that friend who is ALWAYS '2 minutes away' at home! ⏰🤦‍♂️😂"
+  },
+  {
+    "day": 12,
+    "title": "Corporate Email: 'As Per My Last Email' Decoded",
+    "category": "Corporate Humor",
+    "theme": "Office Politics",
+    "hook": "Professional corporate English sounds polite, but the hidden translation is pure violence.",
+    "narration": "'Hope you are doing well' means: 'Reply immediately.' 'Per my previous email' means: 'Can you please learn how to read?' And 'Kind regards' means: 'Do not speak to me ever again.' Corporate survival rule: smile on the call, rage in the mute button.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "CORPORATE ENGLISH IS POLITE VIOLENCE"},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "'PER PREVIOUS EMAIL' = 'CAN YOU LEARN TO READ?'"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "'KIND REGARDS' = 'DO NOT SPEAK TO ME AGAIN'"},
+      {"start": "00:00:16.00", "end": "00:00:22.00", "text": "SMILE ON CALL, RAGE ON THE MUTE BUTTON!"}
+    ],
+    "animation_scenes": [
+      {"action": "typing_laptop", "prop": "coffee_mug", "emotion": "polite_smile"},
+      {"action": "reading_email", "prop": "giant_envelope", "emotion": "eye_twitch"},
+      {"action": "slamming_keys", "prop": "flying_papers", "emotion": "secret_rage"},
+      {"action": "nodding_zoom", "prop": "mute_icon", "emotion": "peaceful_mask"}
+    ],
+    "hashtags": "#corporatelife #officememes #aspermyemail #workplacehumor #itlife",
+    "caption": "Which corporate phrase triggers you the most? 📧💼💀"
+  },
+  {
+    "day": 13,
+    "title": "The Power of Jugaad: Indian Problem Solving",
+    "category": "Inspirational Humor",
+    "theme": "Innovation & Mindset",
+    "hook": "Silicon Valley calls it 'frugal engineering.' In India, we call it Jugaad.",
+    "narration": "Remote control not working? Give it two precise slaps. Shower head broken? Use a plastic bottle with pin holes. Cooler pump stopped? Bicycle chain connected. We don't wait for resources; we create solutions with whatever we have. If you have the Jugaad mindset, no obstacle in life can stop you.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "SILICON VALLEY CALLS IT FRUGAL INNOVATION"},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "WE CALL IT THE LEGENDARY JUGAAD!"},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "TWO PRECISE SLAPS FIX ANY TV REMOTE"},
+      {"start": "00:00:15.50", "end": "00:00:21.50", "text": "DON'T WAIT FOR RESOURCES. CREATE SOLUTIONS!"}
+    ],
+    "animation_scenes": [
+      {"action": "slapping_remote", "prop": "tv_screen", "emotion": "fixing"},
+      {"action": "plastic_bottle_shower", "prop": "water_drops", "emotion": "proud"},
+      {"action": "gears_turning", "prop": "lightbulb", "emotion": "innovative"},
+      {"action": "standing_strong", "prop": "golden_tools", "emotion": "unstoppable"}
+    ],
+    "hashtags": "#jugaad #indianmindset #inspiration #problemsolving #innovativedesi",
+    "caption": "The Jugaad spirit means giving up is never an option! What's your best Jugaad? 🛠️💡"
+  },
+  {
+    "day": 14,
+    "title": "Sunday Evening Anxiety (Monday Is Coming)",
+    "category": "Relatable Meme",
+    "theme": "Weekend Ends",
+    "hook": "Sunday 6 PM is not an hour. It is an existential crisis.",
+    "narration": "Sunday morning: birds singing, breakfast chilling. But by 6 PM, darkness falls and your brain realizes: tomorrow is Monday. Unfinished tasks flash before your eyes, the alarm clock is laughing in the corner, and weekend feels like it lasted 47 seconds. Take a breath. One week at a time. You got this.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "SUNDAY 6 PM IS AN EXISTENTIAL CRISIS"},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "WEEKEND FELT LIKE 47 SECONDS..."},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "MONDAY ALARM IS LAUGHING IN THE CORNER"},
+      {"start": "00:00:16.00", "end": "00:00:21.50", "text": "TAKE A BREATH. YOU GOT THIS WEEK!"}
+    ],
+    "animation_scenes": [
+      {"action": "smiling_sun", "prop": "relaxing_couch", "emotion": "peaceful"},
+      {"action": "shadow_creeping", "prop": "calendar_monday", "emotion": "anxious"},
+      {"action": "sweating_couch", "prop": "alarm_clock", "emotion": "panic"},
+      {"action": "deep_breath", "prop": "glowing_aura", "emotion": "calm_power"}
+    ],
+    "hashtags": "#sundaynightscary #mondayiscoming #relatablememes #mentalhealth #reels",
+    "caption": "Why does Saturday take 2 days and Sunday take 5 minutes?! 😭⏳"
+  },
+  {
+    "day": 15,
+    "title": "Diwali Bonus vs Expected Promotion",
+    "category": "Corporate Humor",
+    "theme": "Diwali & Salary",
+    "hook": "What you expected from company on Diwali vs what you actually received.",
+    "narration": "All year you worked 14 hours a day, submitted every report, attended pointless meetings. In October, you imagine: 'This year, a fat bonus check and promotion.' Diwali eve arrives. HR hands you a fancy box with two dry fruit packets, one scented candle, and a 'Thank You' card. Happy Diwali, now get back to work.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "WORKED 14 HOURS A DAY ALL YEAR..."},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "EXPECTED: FAT BONUS CHECK & PROMOTION"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "HR GIVES: 2 SOAN PAPDI BOXES & A CANDLE"},
+      {"start": "00:00:16.00", "end": "00:00:21.50", "text": "'HAPPY DIWALI, NOW BACK TO WORK!'"}
+    ],
+    "animation_scenes": [
+      {"action": "daydreaming_money", "prop": "flying_rupees", "emotion": "hopeful"},
+      {"action": "hr_handing_box", "prop": "gift_box", "emotion": "excited"},
+      {"action": "opening_box", "prop": "soan_papdi", "emotion": "blank_stare"},
+      {"action": "crying_laughing", "prop": "diwali_diya", "emotion": "sarcastic"}
+    ],
+    "hashtags": "#diwalibonus #soanpapdi #corporatememes #indianoffice #humordaily",
+    "caption": "The immortal tradition of circulating Soan Papdi boxes continues 😂🪔"
+  },
+  {
+    "day": 16,
+    "title": "The Cricket Match Heart Attack",
+    "category": "Sports Passion",
+    "theme": "Cricket Emotions",
+    "hook": "1.4 billion people, one common heartbeat when India needs 12 runs off 6 balls.",
+    "narration": "Forget ECG tests. If your heart survives an India-Pakistan last over, you are medically invincible. Nobody moves from their seat because 'moving is bad luck.' Total silence in the room. A single six over long-on, and the entire street erupts into fireworks. Cricket isn't just a sport here; it is pure emotional therapy.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "INDIA NEEDS 12 RUNS OFF 6 BALLS..."},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "NOBODY MOVES! 'MOVING IS BAD LUCK!'"},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "BALL GOES OVER LONG-ON... IT'S A SIX!"},
+      {"start": "00:00:15.50", "end": "00:00:21.50", "text": "CRICKET ISN'T A SPORT, IT'S PURE EMOTION!"}
+    ],
+    "animation_scenes": [
+      {"action": "frozen_staring", "prop": "tv_scoreboard", "emotion": "tense"},
+      {"action": "nail_biting", "prop": "heartbeat_line", "emotion": "heart_attack"},
+      {"action": "hitting_ball", "prop": "flying_cricket_ball", "emotion": "climax"},
+      {"action": "celebrating_jumping", "prop": "fireworks_display", "emotion": "euphoria"}
+    ],
+    "hashtags": "#cricketfever #teamindia #bleedblue #cricketmemes #indianpassion",
+    "caption": "Who else doesn't change their sitting position when India is batting?! 🏏🇮🇳💥"
+  },
+  {
+    "day": 17,
+    "title": "Overthinking What The Cashier Thought",
+    "category": "Social Anxiety Meme",
+    "theme": "Overthinking",
+    "hook": "Why does social interaction turn our brains into overthinking computers?",
+    "narration": "The waiter says: 'Enjoy your food.' You reply: 'You too.' Then you spend the next three days analyzing your life choices at 3 AM. 'Why did I say that? Does he think I eat his food? Am I banned from this restaurant?' Relax. Nobody remembers your awkwardness except you. Let it go.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:04.50", "text": "WAITER: 'ENJOY YOUR FOOD!'"},
+      {"start": "00:00:04.50", "end": "00:00:08.50", "text": "ME: 'YOU TOO!'"},
+      {"start": "00:00:08.50", "end": "00:00:14.50", "text": "NEXT 3 DAYS: 'WHY DID I SAY THAT?!'"},
+      {"start": "00:00:14.50", "end": "00:00:20.50", "text": "NOBODY REMEMBERS BUT YOU. LET IT GO!"}
+    ],
+    "animation_scenes": [
+      {"action": "taking_plate", "prop": "food_tray", "emotion": "casual"},
+      {"action": "speaking_blunder", "prop": "speech_glitch", "emotion": "shocked"},
+      {"action": "staring_night_ceiling", "prop": "question_marks", "emotion": "overthinking"},
+      {"action": "laughing_it_off", "prop": "glowing_peace", "emotion": "free"}
+    ],
+    "hashtags": "#overthinkingmemes #socialanxiety #relatablehumor #brainfail #shorts",
+    "caption": "The pain of saying 'You too' to the flight attendant who said 'Have a nice flight' 💀😂"
+  },
+  {
+    "day": 18,
+    "title": "The Great Indian Wedding Food Strategy",
+    "category": "Cultural Comedy",
+    "theme": "Weddings",
+    "hook": "Attending an Indian wedding is 10% congratulating the couple, 90% buffet warfare.",
+    "narration": "You starved yourself since 2 PM to prepare stomach capacity. You skip the bride and groom line and head straight for paneer tikka. First plate: starters. Second plate: main course and naan. Third plate: gulab jamun with vanilla ice cream. Calories don't count at weddings; that's Indian law.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "STARVED SINCE 2 PM FOR WEDDING BUFFET"},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "SKIPPED THE COUPLE, DIRECTLY TO PANEER TIKKA"},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "ROUND 3: GULAB JAMUN WITH ICE CREAM"},
+      {"start": "00:00:15.50", "end": "00:00:21.00", "text": "CALORIES DON'T COUNT AT WEDDINGS. DESI LAW!"}
+    ],
+    "animation_scenes": [
+      {"action": "empty_stomach", "prop": "rumbling_belly", "emotion": "hungry"},
+      {"action": "sprinting_buffet", "prop": "full_plate", "emotion": "determined"},
+      {"action": "piling_food", "prop": "giant_food_mountain", "emotion": "greedy_joy"},
+      {"action": "happy_food_coma", "prop": "sweet_bowl", "emotion": "satisfied"}
+    ],
+    "hashtags": "#indianweddings #shaadifood #gulabjamun #desifood #foodmemes",
+    "caption": "Tell the truth: Do you go to weddings for the couple or the food? 🍨🍛😂"
+  },
+  {
+    "day": 19,
+    "title": "From Zero to Hero: The Silent Hustle",
+    "category": "Pure Inspiration",
+    "theme": "Hard Work",
+    "hook": "Nobody claps for you when you are waking up at 5 AM in an empty room.",
+    "narration": "In the beginning, your dreams look crazy to everyone. Relatives doubt you. Friends mock you. But silent dedication speaks louder than loud opinions. Keep grinding in the shadows. One day, the people who doubted you will ask how you did it. Your story is still being written.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "NOBODY CLAPS IN AN EMPTY ROOM AT 5 AM"},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "THEY WILL CALL YOUR DREAMS CRAZY..."},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "KEEP GRINDING IN SILENT SHADOWS"},
+      {"start": "00:00:15.50", "end": "00:00:21.50", "text": "ONE DAY THEY WILL ASK HOW YOU DID IT!"}
+    ],
+    "animation_scenes": [
+      {"action": "working_lamp", "prop": "dim_light", "emotion": "solitary_focus"},
+      {"action": "ignoring_doubters", "prop": "whispering_shadows", "emotion": "unmoved"},
+      {"action": "climbing_stairs", "prop": "ascending_mountain", "emotion": "grit"},
+      {"action": "standing_summit", "prop": "golden_sunrise", "emotion": "triumph"}
+    ],
+    "hashtags": "#silenthustle #motivationquote #desiinspiration #hardworkpaysoff #mindset",
+    "caption": "Work in silence, let your success make the noise. Double tap if you agree! 👑🔥"
+  },
+  {
+    "day": 20,
+    "title": "Phone Battery at 1% vs Walking to the Charger",
+    "category": "Daily Struggle Meme",
+    "theme": "Laziness",
+    "hook": "The greatest physical battle known to mankind happens right in your bed.",
+    "narration": "Your phone is at 1 percent battery. The charger is located exactly 1.5 meters away on the table. Instead of getting up, you stretch your arm like Mr. Fantastic, contort your entire spine, and balance on one toe to grab the cable. You would rather defy physics than stand up for three seconds. Peak efficiency.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:04.50", "text": "PHONE AT 1% BATTERY..."},
+      {"start": "00:00:04.50", "end": "00:00:09.50", "text": "CHARGER IS 1.5 METERS AWAY ON TABLE"},
+      {"start": "00:00:09.50", "end": "00:00:15.00", "text": "STRETCHING LIKE MR FANTASTIC IN BED"},
+      {"start": "00:00:15.00", "end": "00:00:21.00", "text": "DEFYING PHYSICS TO AVOID STANDING UP!"}
+    ],
+    "animation_scenes": [
+      {"action": "phone_blinking_red", "prop": "battery_icon", "emotion": "critical"},
+      {"action": "extreme_stretch_arm", "prop": "elastic_body", "emotion": "straining"},
+      {"action": "fingertip_touches_plug", "prop": "spark_charging", "emotion": "intense_climax"},
+      {"action": "collapsing_back", "prop": "lightning_charge", "emotion": "victory"}
+    ],
+    "hashtags": "#relatablememes #lazyhumor #phonememes #bedstruggles #dailycomedy",
+    "caption": "Who else performs Olympic acrobatics just to reach the phone charger? 🔌🤸‍♂️😂"
+  },
+  {
+    "day": 21,
+    "title": "Indian Mom's Cure for Everything: Haldi Doodh",
+    "category": "Family Humor",
+    "theme": "Home Remedies",
+    "hook": "Western medicine has paracetamol, but Indian mothers have golden milk.",
+    "narration": "Broken bone? Haldi doodh. Fever? Haldi doodh. Depressed about your exam score? Haldi doodh. Heartbroken after a breakup? Add one extra pinch of haldi and go to sleep. It doesn't taste like luxury, but somehow, mom's care heals everything.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:04.50", "text": "BROKEN BONE? HALDI DOODH."},
+      {"start": "00:00:04.50", "end": "00:00:09.00", "text": "DEPRESSED OVER EXAM? HALDI DOODH."},
+      {"start": "00:00:09.00", "end": "00:00:14.50", "text": "HEARTBROKEN? EXTRA PINCH OF HALDI!"},
+      {"start": "00:00:14.50", "end": "00:00:20.50", "text": "MOM'S CARE HEALS EVERYTHING. ALWAYS."}
+    ],
+    "animation_scenes": [
+      {"action": "holding_head", "prop": "bandage", "emotion": "sick"},
+      {"action": "mom_golden_cup", "prop": "steaming_yellow_mug", "emotion": "loving"},
+      {"action": "drinking_gulp", "prop": "golden_glow_energy", "emotion": "healing"},
+      {"action": "healthy_jump", "prop": "halo_sparkles", "emotion": "restored"}
+    ],
+    "hashtags": "#haldidoodh #indianmoms #desiremedies #familyhumor #wholesome",
+    "caption": "The universal Indian cure since 5000 BC! Drop a ❤️ for your mom!"
+  },
+  {
+    "day": 22,
+    "title": "The Infinite WhatsApp Family Group Quotes",
+    "category": "Tech Humor",
+    "theme": "WhatsApp Family",
+    "hook": "Every morning at 6 AM, 250 MB of glittering flowers enter your phone storage.",
+    "narration": "Sun rising, birds tweeting, rotating gold text saying: 'Subh Prabhat, Life is a mirror.' Sent by Sharma uncle with three rose emojis and a picture of a tea cup. Your phone gallery is 90 percent flowers you never planted. Family groups are chaos, but you can't help but smile.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "6 AM: 250 MB OF GLITTER FLOWERS IN PHONE"},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "'SUBH PRABHAT! LIFE IS A MIRROR'"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "SHARMA UNCLE SENDS 15 TEA CUP PICTURES"},
+      {"start": "00:00:16.00", "end": "00:00:21.50", "text": "FAMILY GROUPS ARE CHAOS, BUT WE LOVE THEM!"}
+    ],
+    "animation_scenes": [
+      {"action": "phone_buzzing", "prop": "notification_storm", "emotion": "annoyed"},
+      {"action": "glittering_flower_erupts", "prop": "giant_rose", "emotion": "blinded"},
+      {"action": "smiling_reading", "prop": "tea_emoji", "emotion": "warm"},
+      {"action": "family_embrace", "prop": "heart_sparkles", "emotion": "wholesome"}
+    ],
+    "hashtags": "#whatsappfamily #goodmorningquotes #desifamily #indianhumor #reels",
+    "caption": "How many 'Good Morning' glitter images do you receive every day? 🌹☕😂"
+  },
+  {
+    "day": 23,
+    "title": "The Pain of Waking Up Before Alarm",
+    "category": "Sleep Meme",
+    "theme": "Daily Tragedy",
+    "hook": "There is a special type of pain known only to modern humans.",
+    "narration": "You open your eyes. You feel refreshed, well-rested, ready for the day. You reach out to check your phone, hoping it's 3 AM. It says 6:58 AM. Your alarm is set for 7:00 AM. Exactly one hundred and twenty seconds left. The illusion of free sleep is shattered. Tragic.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "WAKING UP FEELING FRESH & RESTED..."},
+      {"start": "00:00:05.00", "end": "00:00:09.50", "text": "HOPING IT'S 3 AM..."},
+      {"start": "00:00:09.50", "end": "00:00:15.00", "text": "PHONE SAYS 6:58 AM. ALARM AT 7:00 AM!"},
+      {"start": "00:00:15.00", "end": "00:00:21.00", "text": "EXACTLY 120 SECONDS OF SLEEP TRAGICALLY LOST!"}
+    ],
+    "animation_scenes": [
+      {"action": "eyes_open_smile", "prop": "pillow", "emotion": "peaceful"},
+      {"action": "checking_phone", "prop": "glowing_screen", "emotion": "hopeful"},
+      {"action": "clock_reading_658", "prop": "digital_clock", "emotion": "horror"},
+      {"action": "staring_ceiling_deadpan", "prop": "tear_drop", "emotion": "shattered"}
+    ],
+    "hashtags": "#sleepmemes #alarmpain #relatablecomedy #morningstruggle #shorts",
+    "caption": "Those 2 minutes feel more painful than heartbreak ⏰😭💔"
+  },
+  {
+    "day": 24,
+    "title": "Job Interview: 'Where Do You See Yourself in 5 Years?'",
+    "category": "Corporate Humor",
+    "theme": "Interview Clichés",
+    "hook": "The single most difficult question in any job interview.",
+    "narration": "HR asks with a straight face: 'Where do you see yourself in five years?' What I want to say: 'On a beach in Goa with passive income, sleeping twelve hours a day.' What I actually say: 'Leading cross-functional synergies to optimize organizational bandwidth.' Congratulations, corporate actor award unlocked.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "HR: 'WHERE DO YOU SEE YOURSELF IN 5 YEARS?'"},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "WHAT I WANT TO SAY: 'ON GOA BEACH SLEEPING'"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "WHAT I SAY: 'OPTIMIZING CROSS-FUNCTIONAL SYNERGY'"},
+      {"start": "00:00:16.00", "end": "00:00:22.00", "text": "CONGRATS, CORPORATE ACTOR AWARD UNLOCKED!"}
+    ],
+    "animation_scenes": [
+      {"action": "sitting_interview", "prop": "table_laptop", "emotion": "formal"},
+      {"action": "dreaming_beach", "prop": "coconut_tree", "emotion": "bliss"},
+      {"action": "adjusting_tie", "prop": "buzzword_bubbles", "emotion": "fake_professional"},
+      {"action": "holding_oscar", "prop": "golden_statue", "emotion": "bowing"}
+    ],
+    "hashtags": "#jobinterview #hrhumor #corporatecliche #careermemes #relatablework",
+    "caption": "What would you REALLY answer if you could be 100% honest? 😂🏖️👔"
+  },
+  {
+    "day": 25,
+    "title": "The Unstoppable Power of Small Consistent Habits",
+    "category": "Pure Inspiration",
+    "theme": "Habit Building",
+    "hook": "You don't need a massive breakthrough. You just need 1% improvement every day.",
+    "narration": "Reading ten pages a day feels like nothing, but in a year, you finish twelve books. Saving fifty rupees a day feels tiny, but consistency builds empires. Don't wait for dramatic motivation to change your life. Small habits done with relentless discipline create unstoppable humans.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "DON'T WAIT FOR A MASSIVE BREAKTHROUGH"},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "10 PAGES A DAY = 12 BOOKS A YEAR"},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "50 RUPEES SAVED A DAY BUILDS EMPIRES"},
+      {"start": "00:00:15.50", "end": "00:00:21.50", "text": "RELENTLESS DISCIPLINE CREATES CHAMPIONS!"}
+    ],
+    "animation_scenes": [
+      {"action": "reading_small_book", "prop": "stacked_books", "emotion": "focused"},
+      {"action": "putting_coin", "prop": "growing_piggy_bank", "emotion": "steady"},
+      {"action": "steps_climbing", "prop": "stairs_to_sky", "emotion": "determined"},
+      {"action": "radiating_aura", "prop": "golden_crown", "emotion": "empowered"}
+    ],
+    "hashtags": "#atomichabits #dailyinspiration #selfdiscipline #growthmindset #success",
+    "caption": "1% better every single day. What habit are you starting today? 📈🌱✨"
+  },
+  {
+    "day": 26,
+    "title": "The Mystery of the Missing Tupperware",
+    "category": "Family Humor",
+    "theme": "Mom Wrath",
+    "hook": "Losing your passport in a foreign country is fine. Losing mom's Tupperware is lethal.",
+    "narration": "You took leftover parathas to college in a green plastic Tupperware. Three weeks later, mom asks: 'Mera dabba kahan hai?' Instant cold sweat. Your entire life flashes before your eyes. You search your backpack, your friend's car, the lost and found. Nothing. RIP to your peaceful evening.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "LOSING YOUR PASSPORT IS OKAY..."},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "LOSING MOM'S TUPPERWARE IS FATAL!"},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "MOM: 'MERA GREEN DABBA KAHAN HAI?!'"},
+      {"start": "00:00:15.50", "end": "00:00:21.00", "text": "COLD SWEAT. LIFE FLASHES BEFORE EYES!"}
+    ],
+    "animation_scenes": [
+      {"action": "eating_tiffin", "prop": "green_box", "emotion": "eating"},
+      {"action": "mom_hands_on_hips", "prop": "rolling_pin", "emotion": "wrath"},
+      {"action": "sweating_bullet", "prop": "backpack_spilling", "emotion": "terror"},
+      {"action": "crawling_away", "prop": "white_flag", "emotion": "surrender"}
+    ],
+    "hashtags": "#tupperwarememes #indianmoms #desidabba #tiffinbox #relatablehumor",
+    "caption": "Have you ever lost your mom's Tupperware and survived to tell the tale? 🍱😱😂"
+  },
+  {
+    "day": 27,
+    "title": "Traffic Signal Green Light Formula 1 Championship",
+    "category": "Daily Life Humor",
+    "theme": "Indian Traffic",
+    "hook": "The world's fastest acceleration doesn't happen in Formula 1. It happens at Indian signals.",
+    "narration": "Traffic light countdown: 3... 2... 1... Before the light even turns yellow, ten auto rickshaws, three delivery bikes, and a bus behind you start honking aggressively like the nuclear countdown just began. If you take 0.1 seconds to accelerate, you are disgraced. Welcome to the Indian Grand Prix.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:04.50", "text": "TRAFFIC LIGHT: 3... 2... 1..."},
+      {"start": "00:00:04.50", "end": "00:00:09.50", "text": "BEFORE GREEN, 15 VEHICLES START HONKING!"},
+      {"start": "00:00:09.50", "end": "00:00:15.00", "text": "HONKING LIKE THE WORLD IS ENDING IN 2 SECS"},
+      {"start": "00:00:15.00", "end": "00:00:21.00", "text": "WELCOME TO THE INDIAN FORMULA 1 GRAND PRIX!"}
+    ],
+    "animation_scenes": [
+      {"action": "waiting_scooter", "prop": "red_traffic_light", "emotion": "waiting"},
+      {"action": "honking_horns_erupt", "prop": "soundwaves", "emotion": "deafened"},
+      {"action": "rocket_boost_acceleration", "prop": "smoke_cloud", "emotion": "panicked_speed"},
+      {"action": "checkered_flag", "prop": "flying_rickshaw", "emotion": "racing"}
+    ],
+    "hashtags": "#indiantraffic #formula1india #desidriving #honkingmemes #reelsviral",
+    "caption": "Why do people honk 0.001 seconds before the light turns green?! 🚦🏎️😂"
+  },
+  {
+    "day": 28,
+    "title": "Budgeting on the 1st vs the 28th of the Month",
+    "category": "Financial Humor",
+    "theme": "Salary Cycle",
+    "hook": "The two completely different human beings inside you every single month.",
+    "narration": "Day 1 of the month: Salary credited. You order gourmet coffee, tip generously, and eat fancy pasta. Day 28 of the month: You calculate whether two packs of instant Maggi noodles can be split into three meals, and check bank balance with one eye closed. The circle of life repeats.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "DAY 1: SALARY CREDITED! FANCY COFFEE & PASTA"},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "FEELING LIKE AN OIL SHEIKH..."},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "DAY 28: SPLITTING 1 MAGGI INTO 3 MEALS"},
+      {"start": "00:00:15.50", "end": "00:00:21.00", "text": "CHECKING BANK BALANCE WITH ONE EYE CLOSED!"}
+    ],
+    "animation_scenes": [
+      {"action": "throwing_cash", "prop": "fancy_coffee", "emotion": "rich"},
+      {"action": "calendar_flips_28", "prop": "empty_wallet", "emotion": "broke"},
+      {"action": "cooking_maggi", "prop": "tiny_bowl", "emotion": "surviving"},
+      {"action": "crying_laughing_screen", "prop": "zero_balance", "emotion": "acceptance"}
+    ],
+    "hashtags": "#salarymemes #monthstruggles #maggidiet #corporatesalary #relatablehumor",
+    "caption": "Day 1 feeling like Ambani, Day 28 feeling like a monk. Can you relate? 💸🍜😂"
+  },
+  {
+    "day": 29,
+    "title": "Comparison Is The Thief of Joy (Be Your Own Hero)",
+    "category": "Deep Motivation",
+    "theme": "Mindset",
+    "hook": "Stop comparing your Chapter 1 to someone else's Chapter 20.",
+    "narration": "You open Instagram. Someone is vacationing in Europe, someone bought a luxury car, someone got funded. You feel behind. But social media shows the highlight reel, never the behind-the-scenes struggles. Your journey is unique. Your pace is valid. Measure your progress against who you were yesterday, not against anyone else.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "STOP COMPARING YOUR CHAPTER 1 TO THEIR CHAPTER 20"},
+      {"start": "00:00:05.00", "end": "00:00:10.50", "text": "INSTAGRAM ONLY SHOWS THE HIGHLIGHT REEL"},
+      {"start": "00:00:10.50", "end": "00:00:16.00", "text": "YOUR JOURNEY IS UNIQUE. YOUR PACE IS VALID."},
+      {"start": "00:00:16.00", "end": "00:00:22.00", "text": "COMPETE ONLY WITH WHO YOU WERE YESTERDAY!"}
+    ],
+    "animation_scenes": [
+      {"action": "scrolling_phone_sad", "prop": "floating_posts", "emotion": "insecure"},
+      {"action": "putting_phone_away", "prop": "mirror_reflection", "emotion": "awakening"},
+      {"action": "training_hard", "prop": "glowing_path", "emotion": "focus"},
+      {"action": "standing_tall", "prop": "golden_wings", "emotion": "peaceful_strength"}
+    ],
+    "hashtags": "#mindsetmotivation #stopcomparing #beyourself #selfgrowth #reelsindia",
+    "caption": "You are exactly where you need to be. Keep going! Double tap if this resonated ❤️🌟"
+  },
+  {
+    "day": 30,
+    "title": "The Grand Finale: Why You Are Destined for Greatness",
+    "category": "Viral Motivational Finale",
+    "theme": "Unstoppable You",
+    "hook": "Remember this before you sleep tonight: You have survived 100% of your worst days.",
+    "narration": "Every failure that was supposed to break you? You survived it. Every rejection that felt like the end? It redirected you. You are tougher than your doubts, bigger than your fears, and your best days are still ahead of you. Keep showing up. Keep believing. You are unstoppable.",
+    "subtitles": [
+      {"start": "00:00:00.00", "end": "00:00:05.00", "text": "YOU HAVE SURVIVED 100% OF YOUR WORST DAYS"},
+      {"start": "00:00:05.00", "end": "00:00:10.00", "text": "REJECTIONS WERE JUST REDIRECTIONS..."},
+      {"start": "00:00:10.00", "end": "00:00:15.50", "text": "YOU ARE TOUGHER THAN YOUR DOUBTS"},
+      {"start": "00:00:15.50", "end": "00:00:21.50", "text": "KEEP BELIEVING. YOU ARE UNSTOPPABLE!"}
+    ],
+    "animation_scenes": [
+      {"action": "walking_through_storm", "prop": "dark_clouds", "emotion": "resilient"},
+      {"action": "shattering_chains", "prop": "broken_shackles", "emotion": "breakthrough"},
+      {"action": "leaping_forward", "prop": "golden_light_rays", "emotion": "unstoppable"},
+      {"action": "victorious_smile", "prop": "radiant_sun", "emotion": "triumphant"}
+    ],
+    "hashtags": "#grandfinale #motivationmindset #youareunstoppable #victory #dailymotivation",
+    "caption": "Day 30 Milestone! Never ever give up on your dreams. Share this with someone who needs it today! 🌟🚀🇮🇳"
+  }
+]
