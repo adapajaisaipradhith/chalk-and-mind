@@ -1,0 +1,91 @@
+name: Preview
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'transitions/*.glsl'
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+# SECURITY: executes untrusted PR code (renders the contributed shader), so it runs
+# read-only with no secrets, and only on pull_request (never in the default branch
+# context, so no cache poisoning). Publishing GIFs and commenting happens in the
+# trusted preview-comment.yml (workflow_run), which never executes PR code.
+# To preview an older PR that never ran this workflow, close and reopen it.
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Fetch master for diff
+        run: git fetch origin master
+
+      - uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb mesa-utils libgl1-mesa-dri libglapi-mesa libosmesa6 ffmpeg
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prod --filter gl-transitions-repository
+
+      - name: Detect transitions
+        id: detect
+        env:
+          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          FILES=$(git diff --name-only origin/master...HEAD -- 'transitions/*.glsl' | tr '\n' ' ')
+          if [ -z "$FILES" ]; then
+            echo "No .glsl files changed"
+            echo "files=" >> $GITHUB_OUTPUT
+          else
+            echo "files=$FILES" >> $GITHUB_OUTPUT
+          fi
+          echo "pr=$PULL_REQUEST_NUMBER" >> $GITHUB_OUTPUT
+
+      - name: Validate and render previews
+        if: steps.detect.outputs.files != ''
+        env:
+          FILES: ${{ steps.detect.outputs.files }}
+          PR_NUMBER: ${{ steps.detect.outputs.pr }}
+        run: |
+          mkdir -p /tmp/previews
+          # PR number travels via the artifact since workflow_run data is empty for forks.
+          printf '%s' "$PR_NUMBER" > /tmp/previews/pr.txt
+          xvfb-run -s "-ac -screen 0 1280x1024x24" bash -c '
+            for file in $FILES; do
+              name=$(basename "$file" .glsl)
+              echo "=== Validating $name ==="
+              node scripts/checks/validate-transition.mjs \
+                --transition "$file" > "/tmp/previews/${name}.validation.json" 2>/dev/null || true
+              cat "/tmp/previews/${name}.validation.json"
+              echo ""
+              echo "=== Rendering $name ==="
+              node scripts/rendering/render-preview.mjs \
+                --transition "$file" \
+                --output "/tmp/previews/${name}.gif" 2>&1 || echo "Failed: $name"
+            done
+          '
+
+      - name: Upload previews as artifact
+        if: steps.detect.outputs.files != ''
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: transition-previews
+          path: |
+            /tmp/previews/*.gif
+            /tmp/previews/*.validation.json
+            /tmp/previews/pr.txt
+          if-no-files-found: warn

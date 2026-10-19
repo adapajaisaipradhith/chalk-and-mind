@@ -1,0 +1,127 @@
+# Repository scripts
+
+Everything that builds, checks and renders the collection. All scripts are ES modules (`.mjs`) with their dependencies in the root `package.json`:
+
+```sh
+mise install         # Node, pnpm and Rust (mise.toml; see CONTRIBUTING.md)
+pnpm install --filter '!gl-transitions-react-native-skia-example'   # all but the Expo example; gl (headless WebGL, for rendering) is optional
+pnpm test            # unit tests (**/*.test.mjs)
+pnpm run lint        # layout, encoding and parsing of transitions/
+pnpm run build       # the gl-transitions package, in packages/gl-transitions/dist/ (the first run downloads glslang and builds naga with the Rust of mise.toml)
+```
+
+| Folder | What it does |
+|---|---|
+| `catalog/` | Parses each `.glsl` (uniforms, defaults, annotations) into `gl-transitions.json` (`build-catalog.mjs`) |
+| `checks/` | `lint-transitions.mjs` (folder layout, UTF-8, LF, header and parameter defaults), `validate-transition.mjs` (spec checks shown in PR previews) and `check-changesets.mjs` (a pull request that changes a published package adds a changeset) |
+| `rendering/` | Headless GLSL rendering: reference strips (`render-references.mjs`) and PR preview GIFs (`render-preview.mjs`) |
+| `targets/` | Conversion to other shader languages (SkSL, GLSL ES 3.00, WGSL, MSL), checked with each language's compiler and, where it can render, against the reference renders. `toolchain.mjs` installs the pinned native compilers they need |
+| `agents/` | Documents for coding agents, generated from the catalog: `llms.txt`, `llms-full.txt` and the Agent Skill's catalog (`build-agent-docs.mjs`) |
+| `rust-crate/` | `build-crate.mjs`, which writes the sources of the [Rust crate](../crates/gl-transitions) from the built npm package (see below), and `sync-version.mjs`, which copies the crate's version from changesets into `Cargo.toml` |
+| `npm-package/` | `build.sh`, which builds `packages/gl-transitions` (its manifest, README and types) into its `dist/`, and `write-transition-changesets.mjs`, which writes a changeset for each transition added or changed since the last release |
+
+The reference renders are the ground truth for every other target: each target renders the same procedural images at the same progress values and is compared pixel by pixel. CI (**Reference renders** workflow) also renders the base branch and the PR to report transitions whose output changed.
+
+```sh
+pnpm run render:references --out /tmp/refs
+pnpm run build:sksl --out /tmp/sksl --refs /tmp/refs --renders /tmp/sksl-renders --report /tmp/sksl.json
+pnpm run build:glsl3 --out /tmp/glsl3 --report /tmp/glsl3.json
+```
+
+## SkSL
+
+`targets/build-sksl.mjs` converts each transition into a standalone [SkSL](https://skia.org/docs/user/sksl/) runtime effect, compiles it with Skia (CanvasKit), renders it with the same input images as the GLSL reference and compares the two.
+
+### Shader contract
+
+Every generated `.sksl` file has the same interface:
+
+| | Name | Notes |
+|---|---|---|
+| child | `_from`, `_to` | The two images, drawn at the output size |
+| child | one per extra texture | Same name as the GLSL `sampler2D` (listed in `textures` of `gl-transitions.json`) |
+| uniform | `float2 _resolution` | Output size in pixels |
+| uniform | `float progress`, `float ratio` | As in the GLSL spec |
+| uniform | each parameter | Same name and type; `bool` parameters are `int` (0 or 1) |
+| entry | `half4 main(float2 coord)` | Pixel coordinates, top-left origin |
+
+Transitions see straight (unpremultiplied) colors, as in the GLSL spec; the output is premultiplied, as Skia expects.
+
+### Conversion
+
+1. Preprocess (`targets/glsl-preprocess.mjs`): strip comments, expand `#define` macros, drop `#ifdef GL_ES` blocks.
+2. Map extra `sampler2D` inputs to child shaders and `texture2D(x, uv)` to a sampling helper.
+3. Turn `bool` uniforms into `int` uniforms.
+4. Add the wrapper (children, uniforms, `getFromColor` / `getToColor`, `main`).
+
+### Comparison statuses
+
+| Status | Meaning |
+|---|---|
+| `match` | At most 1% of pixels differ by more than 16/255 in every frame |
+| `close` | At most 5% |
+| `noise-only` | Uses hash noise (`fract(sin(x) * 43758.5453)`) and matches when compared as 10×10 block averages |
+| `differs` | Anything else. Transitions flagged `hashNoise` pick random tiles or shapes, which legitimately differ between implementations |
+| `no-reference` | The GLSL reference render is missing or has another size, so nothing was compared |
+| `compile-error` | Skia rejected the generated shader |
+| `unsupported` | The converter can't handle the source |
+
+## Agent documents
+
+`agents/build-agent-docs.mjs` runs at the end of `pnpm run build` and adds to the package:
+
+| File | Content |
+|---|---|
+| `llms.txt` | [llms.txt](https://llmstxt.org/) index: summary, the GLSL contract, docs links and one line per transition |
+| `llms-full.txt` | Every transition with its description, tags, typed parameters (defaults, ranges), author, license and GLSL / SkSL / preview links |
+| `skills/gl-transitions/` | The Agent Skill from [`skills/gl-transitions/`](../skills/gl-transitions/SKILL.md), plus the generated `references/catalog.md` (tag index, one line per transition) |
+
+Links point to the exact package version on jsDelivr. The skill's integration guides (`references/*.md`) are written by hand; `agents/agent-docs.test.mjs` checks the `bakeParams` snippet against every transition.
+
+## GLSL ES 3.00
+
+`targets/build-glsl3.mjs` converts each transition to GLSL ES 3.00 (WebGL 2, OpenGL ES 3) and compiles it with [glslang](https://github.com/KhronosGroup/glslang), the Khronos reference compiler, inside the wrapper documented in the package README. glslang is a pinned prebuilt release, downloaded and checked against its SHA-256 on first use (`targets/toolchain.mjs`); set `GLSLANG_VALIDATOR` to use your own binary on other platforms.
+
+The output keeps the spec v1 shape: the parameter uniforms (with their `// = default` comments) and `vec4 transition(vec2 uv)`, so hosts reuse their GLSL wrapper with `#version 300 es`. The only rewrite is `texture2D()` → `texture()`. Anything else GLSL ES 3.00 rejects (non-constant global initializers, keywords used as names…) is reported as `compile-error` and left out of the package.
+
+It is not rendered, because headless GL is WebGL 1 only. The WGSL target, built from the same converted source, is.
+
+## WGSL and MSL
+
+`targets/build-wgsl-msl.mjs` goes through SPIR-V, so every later target (HLSL, Godot…) can reuse the same path:
+
+1. `targets/spirv.mjs` wraps the GLSL ES 3.00 source into a Vulkan GLSL 4.50 fragment shader with a fixed binding layout (parameters in a std140 uniform block, separate texture and sampler bindings). The package README documents the layout: it is the contract adapters rely on.
+2. glslang compiles it to SPIR-V.
+3. [naga](https://github.com/gfx-rs/wgpu/tree/trunk/naga) (wgpu's translator) writes WGSL and MSL. Function names mangled by glslang are restored when unambiguous, and Metal resource indices are assigned from the layout (the naga command line leaves them as placeholders).
+4. naga validates the WGSL. With `--refs`, Dawn (the optional `webgpu` package) compiles and renders it with the reference images and compares with the GLSL renders, with the same statuses as SkSL.
+5. On macOS with the Metal toolchain, Apple's Metal compiler compiles the MSL (`compiled`); elsewhere it is reported as `translated`.
+
+Textures are sampled at an explicit level 0: WGSL only allows implicit-derivative sampling in uniform control flow, and many transitions sample inside branches.
+
+naga has no prebuilt release, so `targets/toolchain.mjs` builds the pinned version with `cargo install --locked` on first use (about a minute) with the Rust of `mise.toml` (`mise install`), or set `NAGA`. On Linux, Dawn needs a Vulkan driver (`mesa-vulkan-drivers` provides the lavapipe software renderer).
+
+```sh
+pnpm run build:wgsl-msl --wgsl /tmp/wgsl --msl /tmp/msl --layouts /tmp/layouts.json --refs /tmp/refs --report /tmp/wgsl-msl.json
+```
+
+## Compatibility matrix
+
+`targets/build-compatibility.mjs` merges the targets' `--report` files into `compatibility.json` (shipped in the package, documented in its README) and a Markdown table for the CI job summary. `npm-package/build.sh` runs every target with a report; with `REFERENCE_RENDERS=<dir>` it also renders SkSL and WGSL and compares them with the GLSL renders in `<dir>`, which is what the publishing workflow does.
+
+```sh
+pnpm run build:compatibility --out /tmp/compatibility.json --summary /tmp/compatibility.md /tmp/sksl.json /tmp/glsl3.json /tmp/wgsl-msl.json
+REFERENCE_RENDERS=/tmp/refs pnpm run build
+```
+
+The **Reference renders** workflow shows the table on every PR that touches transitions or scripts.
+
+## Rust crate
+
+[`crates/gl-transitions`](../crates/gl-transitions) embeds the npm package's catalog and shader sources. `rust-crate/build-crate.mjs` copies them into `crates/gl-transitions/generated/` with `catalog.rs`, one Rust `Transition` literal per transition (typed parameter defaults, the WGSL / Metal uniform layout, `include_str!` of each source), and `LICENSES.md`, the source of every transition that is not MIT licensed (its notice and conditions). The folder is not committed; `Cargo.toml` lists it in `include`, so `cargo package` ships it and the published crate needs nothing else (with `--allow-dirty`: cargo counts the git-ignored files it packages as uncommitted changes).
+
+```sh
+pnpm run build && pnpm run build:crate
+cd crates/gl-transitions && cargo test   # naga validates every WGSL shader, Skia compiles every SkSL one (CPU)
+```
+
+The **Rust crate** workflow runs these, Clippy and `cargo publish --dry-run`. The crate has its own 0.x version; `CATALOG_VERSION` is the npm version its transitions come from. changesets versions it (`crates/gl-transitions/package.json`, a private package); `rust-crate/sync-version.mjs` copies the version into `Cargo.toml` and the `Cargo.lock` files, and the CI workflow publishes it to crates.io after npm (see CONTRIBUTING.md).

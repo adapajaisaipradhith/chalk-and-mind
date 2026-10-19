@@ -1,0 +1,159 @@
+name: Reference renders
+
+# Renders every transition on the base branch and on the PR with the same
+# software GL (Mesa llvmpipe) and reports transitions whose output changed.
+# Then converts every transition to SkSL, renders it with Skia (CanvasKit) and
+# reports how it compares with the GLSL render, compiles the GLSL ES 3.00
+# versions with glslang, and translates them through SPIR-V to WGSL (rendered
+# with Dawn on Mesa lavapipe and compared too) and MSL.
+# Also validates every transition against the spec (validate-transition.mjs),
+# and renders every transition through the React Native Skia package and with
+# Remotion (@gl-transitions/remotion).
+# The comparisons are informational: fails only when a GLSL transition does not
+# render or breaks the spec, or when the React Native Skia or Remotion package renders a
+# transition differently than its GLSL reference (beyond hash noise).
+
+on:
+  pull_request:
+    paths:
+      - 'transitions/**'
+      - 'scripts/**'
+      - 'packages/**'
+      - 'examples/remotion/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
+      - 'mise.toml'
+      - 'mise.lock'
+      - '.github/workflows/references.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: references-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libgl1-mesa-dri libglapi-mesa libosmesa6 mesa-vulkan-drivers
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --filter '!gl-transitions-react-native-skia-example'
+
+      # glslang (checksummed download) and naga (cargo build, ~1 min) for the shader targets.
+      - name: Cache shader toolchain
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: node_modules/.cache/gl-transitions-toolchain
+          key: shader-toolchain-${{ runner.os }}-${{ hashFiles('scripts/targets/toolchain.mjs') }}
+
+      - name: Check out base transitions
+        env:
+          BASE_REF: ${{ github.base_ref || 'master' }}
+        run: |
+          mkdir -p /tmp/base
+          git archive "origin/${BASE_REF}" transitions | tar -x -C /tmp/base
+
+      - name: Render base and head
+        run: |
+          xvfb-run -s "-ac -screen 0 1280x1024x24" bash -c '
+            node scripts/rendering/render-references.mjs --transitions /tmp/base/transitions --out /tmp/refs/base > /tmp/refs-base.json &&
+            node scripts/rendering/render-references.mjs --out /tmp/refs/head > /tmp/refs-head.json;
+            node scripts/rendering/render-references.mjs --check --out /tmp/refs/base > /tmp/refs-diff.json
+          '
+
+      - name: Build and compare SkSL
+        run: node scripts/targets/build-sksl.mjs --out /tmp/sksl/shaders --refs /tmp/refs/head --renders /tmp/sksl/renders --report /tmp/sksl/report.json
+
+      - name: Validate transitions against the spec
+        run: |
+          xvfb-run -s "-ac -screen 0 1280x1024x24" bash -c '
+            failed=0
+            for file in transitions/*.glsl; do
+              node scripts/checks/validate-transition.mjs --transition "$file" > /tmp/validation.json || { cat /tmp/validation.json; failed=1; }
+            done
+            exit $failed
+          '
+      # Informational like the SkSL comparison: runs even when the spec validation fails.
+      - name: Build GLSL ES 3.00
+        if: always()
+        continue-on-error: true
+        run: node scripts/targets/build-glsl3.mjs --out /tmp/glsl3/shaders --report /tmp/glsl3/report.json
+
+      - name: Build WGSL and MSL, compare WGSL
+        run: node scripts/targets/build-wgsl-msl.mjs --wgsl /tmp/wgsl-msl/wgsl --msl /tmp/wgsl-msl/msl --layouts /tmp/wgsl-msl/layouts.json --refs /tmp/refs/head --renders /tmp/wgsl-msl/renders --report /tmp/wgsl-msl/report.json
+
+      - name: Compare React Native Skia renders
+        run: |
+          pnpm --filter @gl-transitions/react-native-skia run build
+          GL_TRANSITIONS_REFS=/tmp/refs/head node --test "packages/react-native-skia/test/*.test.mjs"
+
+      # The example renders every transition with Remotion's renderer (its own Chrome, WebGL on
+      # SwiftShader) and compares it with the reference: fails like the step above.
+      - name: Compare Remotion renders
+        if: ${{ !cancelled() }}
+        run: |
+          CATALOG_ONLY=1 pnpm run build
+          pnpm --filter @gl-transitions/remotion run build
+          pnpm --filter gl-transitions-remotion-example run typecheck
+          pnpm --filter gl-transitions-remotion-example run check /tmp/refs/head --renders /tmp/remotion/renders --report /tmp/remotion/report.json
+
+      - name: Summary
+        if: always()
+        run: |
+          node -e '
+            const fs = require("fs");
+            const read = (f) => { try { return JSON.parse(fs.readFileSync(f, "utf8")); } catch { return null; } };
+            const head = read("/tmp/refs-head.json"), diff = read("/tmp/refs-diff.json");
+            const out = ["## Reference renders", ""];
+            if (!head || !diff) { out.push("Rendering did not complete, see the logs."); }
+            else {
+              out.push(`Rendered ${head.rendered} transitions.`, "");
+              out.push(`**Output changed:** ${diff.changed.length ? diff.changed.map(c => `\`${c.name}\` (progress ${c.progress.join(", ")})`).join(", ") : "none"}`);
+              out.push(`**New:** ${diff.missing.length ? diff.missing.map(n => `\`${n}\``).join(", ") : "none"}`);
+              if (head.failed.length) {
+                out.push("", "**Failed to render:**");
+                for (const f of head.failed) out.push(`- \`${f.name}\`: ${f.error.split("\n")[0]}`);
+              }
+            }
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, out.join("\n") + "\n");
+          '
+          if [ -f /tmp/remotion/report.json ]; then
+            node -e 'const r = require("/tmp/remotion/report.json"); console.log(`\n**Remotion:** ${Object.entries(r.counts).map(([k, v]) => `${v} ${k}`).join(", ")} (of ${r.total})\n`)' >> "$GITHUB_STEP_SUMMARY"
+          fi
+          reports=$(ls /tmp/sksl/report.json /tmp/glsl3/report.json /tmp/wgsl-msl/report.json 2>/dev/null || true)
+          if [ -n "$reports" ]; then
+            node scripts/targets/build-compatibility.mjs --summary /tmp/compatibility.md $reports
+            cat /tmp/compatibility.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload renders
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: reference-renders
+          path: |
+            /tmp/refs/
+            /tmp/sksl/
+            /tmp/glsl3/
+            /tmp/remotion/
+            /tmp/wgsl-msl/
+          if-no-files-found: warn
+
+      - name: Fail on render errors
+        run: |
+          node -e 'process.exit(JSON.parse(require("fs").readFileSync("/tmp/refs-head.json","utf8")).failed.length ? 1 : 0)'
